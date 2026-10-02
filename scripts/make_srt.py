@@ -38,7 +38,7 @@ def wrap(text, width):
 
 def split_cues(text, mx):
     """Tách theo câu, rồi theo dấu phẩy gần giữa nếu một mảnh dài hơn mx ký tự."""
-    parts = [p.strip() for p in re.findall(r"[^.?!]+[.?!]?", text) if p.strip()]
+    parts = [p.strip() for p in re.split(r"(?<=[.?!])\s+", text) if p.strip()]
     out = []
     for p in parts:
         if len(p) > mx and "," in p:
