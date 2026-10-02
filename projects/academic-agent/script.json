@@ -1,7 +1,7 @@
 {
  "project": "academic-agent",
  "aspect": "9x16",
- "total_s": 50.5,
+ "total_s": 52.5,
  "scenes": [
   {
    "id": "S01",
@@ -96,7 +96,7 @@
    "title_vi": "Thử ngay",
    "title_en": "Try it now",
    "start": 47.5,
-   "end": 50.5,
+   "end": 52.5,
    "vi": "Thử ngay tại aaa.isavietnam.app",
    "en": "Try it now at aaa.isavietnam.app",
    "vo_vi": "Thử ngay tại ây ây ây chấm ai-sa-việt-nam chấm app.",
