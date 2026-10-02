@@ -21,8 +21,8 @@
 
 ## Tệp
 - `script.json`: lời dẫn, phụ đề, mốc thời gian từng cảnh.
-- `out/sub.vi.srt`, `out/sub.en.srt`: phụ đề (tách cue theo câu).
-- Tái tạo: `python scripts/make_srt.py projects/academic-agent/script.json --lang vi --width 36 --split --out projects/academic-agent/out/sub.vi.srt`
+- `subs/sub.vi.srt`, `subs/sub.en.srt`: phụ đề (tách cue theo câu).
+- Tái tạo: `python scripts/make_srt.py projects/academic-agent/script.json --lang vi --width 36 --split --out projects/academic-agent/subs/sub.vi.srt`
 
 ## Việc tiếp theo
 1. Thêm 9 ảnh vào `assets/`.
