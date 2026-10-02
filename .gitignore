@@ -5,3 +5,4 @@ projects/*/out/
 projects/*/clips/
 projects/*/audio/*.wav
 *.mp4
+!projects/*/deliverables/*.mp4
