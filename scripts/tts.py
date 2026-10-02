@@ -86,9 +86,35 @@ def azure(text, voice, lang, rate, ssml):
     return post(url, headers, body_xml.encode("utf-8"))
 
 
+EDGE_DEFAULT_VOICES = {"vi": "vi-VN-HoaiMyNeural", "en": "en-US-AvaMultilingualNeural"}
+
+
+def edge(text, voice, lang, rate):
+    """Microsoft Edge TTS miễn phí, không cần khóa (pip install edge-tts)."""
+    import asyncio
+    import tempfile
+    try:
+        import certifi
+        ca = os.environ.get("SSL_CERT_FILE")
+        if ca:  # edge-tts dùng bundle certifi riêng; trỏ về CA của môi trường (proxy)
+            certifi.where = lambda: ca
+        import edge_tts
+    except ImportError:
+        die("thiếu edge-tts: pip install edge-tts")
+    voice = voice or EDGE_DEFAULT_VOICES[lang]
+    with tempfile.NamedTemporaryFile(suffix=".mp3", delete=False) as t:
+        path = t.name
+    try:
+        asyncio.run(edge_tts.Communicate(text, voice, rate=rate if rate.startswith(("+", "-")) else "+0%").save(path))
+        with open(path, "rb") as f:
+            return f.read()
+    finally:
+        os.remove(path)
+
+
 def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    ap.add_argument("--provider", choices=["elevenlabs", "azure"], required=True)
+    ap.add_argument("--provider", choices=["elevenlabs", "azure", "edge"], required=True)
     ap.add_argument("--lang", choices=["vi", "en"], default="vi")
     ap.add_argument("--voice", help="voice_id (ElevenLabs) hoặc tên giọng (Azure)")
     ap.add_argument("--text-file", required=True)
@@ -107,6 +133,8 @@ def main():
 
     if a.provider == "elevenlabs":
         audio = elevenlabs(text, a.voice, a.model, a.stability, a.similarity, a.style)
+    elif a.provider == "edge":
+        audio = edge(text, a.voice, a.lang, a.rate)
     else:
         audio = azure(text, a.voice, a.lang, a.rate, a.ssml)
 
