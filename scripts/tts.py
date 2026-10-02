@@ -52,10 +52,14 @@ def elevenlabs(text, voice, model, stability, similarity, style):
         },
     }).encode()
     headers = {
-        "xi-api-key": env("ELEVENLABS_API_KEY"),
         "Content-Type": "application/json",
         "Accept": "audio/mpeg",
     }
+    # Có biến môi trường thì gửi khóa; nếu không, dựa vào credential của môi trường
+    # (hệ thống tự chèn header xi-api-key cho api.elevenlabs.io).
+    key = os.environ.get("ELEVENLABS_API_KEY")
+    if key:
+        headers["xi-api-key"] = key
     url = f"https://api.elevenlabs.io/v1/text-to-speech/{voice}?output_format=mp3_44100_128"
     return post(url, headers, body)
 
