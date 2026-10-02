@@ -25,6 +25,7 @@ def main():
     ap.add_argument("--lang", required=True)
     ap.add_argument("--out", required=True)
     ap.add_argument("--audio")
+    ap.add_argument("--no-subs", action="store_true", help="không burn phụ đề")
     ap.add_argument("--font", default="DejaVu Sans")
     ap.add_argument("--poster", default="Tro ly hoc thuat AAA.png")
     a = ap.parse_args()
@@ -67,7 +68,9 @@ def main():
     cmd = ["ffmpeg", "-y", "-f", "concat", "-safe", "0", "-i", lst]
     if a.audio:
         cmd += ["-i", a.audio, "-map", "0:v", "-map", "1:a", "-c:a", "aac", "-b:a", "192k", "-ar", "48000", "-shortest"]
-    cmd += ["-vf", vf, "-c:v", "libx264", "-crf", "18", "-preset", "slow", "-pix_fmt", "yuv420p",
+    if not a.no_subs:
+        cmd += ["-vf", vf]
+    cmd += ["-c:v", "libx264", "-crf", "18", "-preset", "slow", "-pix_fmt", "yuv420p",
             "-movflags", "+faststart", a.out]
     os.makedirs(os.path.dirname(os.path.abspath(a.out)), exist_ok=True)
     run(cmd)
