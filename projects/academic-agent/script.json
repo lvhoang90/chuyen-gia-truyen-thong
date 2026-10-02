@@ -1,0 +1,106 @@
+{
+ "project": "academic-agent",
+ "aspect": "9x16",
+ "total_s": 50.5,
+ "scenes": [
+  {
+   "id": "S01",
+   "title_vi": "Đăng ký miễn phí",
+   "title_en": "Sign up for free",
+   "start": 0.0,
+   "end": 7.0,
+   "vi": "Bạn đang đọc hàng chục bài báo để tìm đúng tài liệu cho đề tài? Đăng ký miễn phí, mỗi ngày có 2 lượt phân tích.",
+   "en": "Reading dozens of papers to find the right source? Sign up free and get 2 analyses a day.",
+   "vo_vi": "Đăng ký miễn phí, mỗi ngày có hai lượt phân tích.",
+   "vo_en": "Sign up free and get two analyses a day."
+  },
+  {
+   "id": "S02",
+   "title_vi": "Dán tóm tắt đề tài",
+   "title_en": "Paste your abstract",
+   "start": 7.0,
+   "end": 11.5,
+   "vi": "Bước một, dán tóm tắt đề tài của bạn. Đây là thước đo để chấm mọi tài liệu.",
+   "en": "Step one, paste your abstract. It is the yardstick for every source.",
+   "vo_vi": "Bước một: dán tóm tắt đề tài của bạn.",
+   "vo_en": "Step one: paste your abstract."
+  },
+  {
+   "id": "S03",
+   "title_vi": "Tải tài liệu lên",
+   "title_en": "Upload a document",
+   "start": 11.5,
+   "end": 17.0,
+   "vi": "Bước hai, tải tệp PDF, DOC hoặc DOCX. Bản scan cũng đọc được, và tệp không bị lưu lại.",
+   "en": "Step two, upload a PDF, DOC or DOCX. Scans work too, and files are never stored.",
+   "vo_vi": "Bước hai: tải tệp lên. Bản scan cũng đọc được.",
+   "vo_en": "Step two: upload a file. Scans work too."
+  },
+  {
+   "id": "S04",
+   "title_vi": "Điểm phù hợp 0–100",
+   "title_en": "A fit score from 0 to 100",
+   "start": 17.0,
+   "end": 22.0,
+   "vi": "Chỉ vài phút sau, bạn có điểm phù hợp từ 0 đến 100, theo năm tiêu chí, kèm tóm tắt.",
+   "en": "Minutes later you get a 0 to 100 fit score on five criteria, plus a summary.",
+   "vo_vi": "Vài phút sau, bạn có điểm phù hợp từ không đến một trăm.",
+   "vo_en": "Minutes later, you get a fit score from zero to one hundred."
+  },
+  {
+   "id": "S05",
+   "title_vi": "Đoạn đáng trích dẫn",
+   "title_en": "Passages worth citing",
+   "start": 22.0,
+   "end": 29.0,
+   "vi": "Ứng dụng chọn ra những đoạn đáng trích, xếp theo mức ưu tiên, có số trang, và đối chiếu nguyên văn với tài liệu.",
+   "en": "It picks the passages worth citing, ranked by priority, with page numbers and checked verbatim.",
+   "vo_vi": "Những đoạn đáng trích, có số trang, đối chiếu nguyên văn.",
+   "vo_en": "Passages worth citing, with page numbers, checked verbatim."
+  },
+  {
+   "id": "S06",
+   "title_vi": "Trích dẫn một chạm",
+   "title_en": "One-tap citation",
+   "start": 29.0,
+   "end": 36.5,
+   "vi": "Chọn APA, Harvard, IEEE hoặc hơn 10.000 kiểu tạp chí, rồi sao chép danh mục tài liệu và trích dẫn trong bài chỉ với một chạm.",
+   "en": "Pick APA, Harvard, IEEE or 10,000+ journal styles, then copy the reference and in-text citation in one tap.",
+   "vo_vi": "Chọn kiểu trích dẫn, sao chép chỉ với một chạm.",
+   "vo_en": "Pick a style, copy in one tap."
+  },
+  {
+   "id": "S07",
+   "title_vi": "Lịch sử theo đề tài",
+   "title_en": "History grouped by topic",
+   "start": 36.5,
+   "end": 41.5,
+   "vi": "Mọi trích dẫn được gom theo đề tài. Đổi kiểu và ngôn ngữ ngay tại từng nguồn.",
+   "en": "Citations are grouped by topic. Change style and language on each source.",
+   "vo_vi": "Mọi trích dẫn được gom theo đề tài.",
+   "vo_en": "Citations are grouped by topic."
+  },
+  {
+   "id": "S08",
+   "title_vi": "Điểm thấp? Vẫn có hướng đi",
+   "title_en": "Low score? You still have a path",
+   "start": 41.5,
+   "end": 47.5,
+   "vi": "Điểm thấp thì sao? Ứng dụng gợi ý nguồn khác, cách chỉnh abstract và tạp chí phù hợp từ EduFind.",
+   "en": "Low score? It suggests other sources, a sharper abstract and journals from EduFind.",
+   "vo_vi": "Điểm thấp? Vẫn có hướng đi.",
+   "vo_en": "Low score? You still have a path."
+  },
+  {
+   "id": "S09",
+   "title_vi": "Thử ngay",
+   "title_en": "Try it now",
+   "start": 47.5,
+   "end": 50.5,
+   "vi": "Thử ngay tại aaa.isavietnam.app",
+   "en": "Try it now at aaa.isavietnam.app",
+   "vo_vi": "Thử ngay tại ây ây ây chấm ai-sa-việt-nam chấm app.",
+   "vo_en": "Try it now at triple-A dot I-S-A Vietnam dot app."
+  }
+ ]
+}
